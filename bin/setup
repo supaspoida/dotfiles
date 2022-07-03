@@ -1,0 +1,35 @@
+#!/bin/bash
+
+echo "---> Install homebrew packages"
+brew bundle check || brew bundle
+
+export ASDF_DIR="$HOME/.asdf"
+
+if [[ ! -d $ASDF_DIR ]]; then
+  echo
+  echo "---> Install asdf"
+  git clone https://github.com/asdf-vm/asdf.git "${ASDF_DIR}"
+
+  cd "${ASDF_DIR}"
+
+  ASDF_REF="${ASDF_REF:-$(git describe --abbrev=0 --tags)}"
+
+  git checkout $ASDF_REF
+
+  cd -
+fi
+
+export PATH="$PATH:${ASDF_DIR}/bin"
+source "${ASDF_DIR}/lib/asdf.sh"
+
+echo
+echo "---> Add tool plugins"
+jq -cR 'split(" ")'  .tool-versions | jq -r .[0] | xargs -L1 asdf plugin add
+
+echo
+echo "---> Install tool versions"
+asdf install
+
+echo
+echo "---> Setup direnv"
+asdf direnv setup --version latest
