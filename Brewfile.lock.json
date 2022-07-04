@@ -658,7 +658,8 @@
       }
     },
     "mas": {
-      "tailscale": null
+      "tailscale": null,
+      "moom": null
     },
     "cask": {
       "visual-studio-code": {
@@ -710,9 +711,9 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "4c070b73d08d205c28060bafe63f4638a3d09940",
-        "CLT": "13.0.0.0.1.1627064638",
-        "Xcode": "13.2.1",
+        "Homebrew/homebrew-core": "a0f71b75170ff0cf85754cc0d8672277807ab5f3",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.4",
         "macOS": "12.4"
       }
     }

@@ -34,3 +34,4 @@ cask "utm"
 cask "visual-studio-code"
 
 mas "tailscale", id: 1475387142
+mas "moom", id: 419330170
