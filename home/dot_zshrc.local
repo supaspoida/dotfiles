@@ -1,0 +1,62 @@
+setopt  autocd autopushd
+
+alias gln="git ln --color | perl -ple 's/\*/sprintf(\"%2s\", \$n++)/e' | less"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/Users/supaspoida/code/dotmatrix/hr/bin/hr init -)"
+eval "$(starship init zsh)"
+
+export ASDF_DIR="$HOME/.asdf"
+
+if [[ -d $ASDF_DIR ]]; then
+  export PATH="$PATH:${ASDF_DIR}/bin"
+  source "${ASDF_DIR}/lib/asdf.sh"
+fi
+
+direnv() { asdf exec direnv "$@"; }
+
+gri () {
+  if [[ -n "$1" ]]; then
+    git rebase -i head~$1
+  else
+    git rebase -i head~7
+  fi
+}
+
+fixup () {
+  git fixup head~$1
+}
+
+squash () {
+  git squash head~$1
+}
+
+show () {
+  count=${1:-0}
+  git show head~$count
+}
+
+wip () {
+  git commit -m "wip${1:+-$1}"
+}
+
+# Complete $PWD/bin if it exists. Good for bundler with binstubs
+zstyle -e ':completion:*' command-path '[[ -d $PWD/bin ]] && reply=($PWD/bin $path)'
+
+if [ ! -z "$TMUX" ]; then
+  fg-widget() {
+    stty icanon echo pendin -inlcr < /dev/tty
+    stty discard '^O' dsusp '^Y' lnext '^V' quit '^\' susp '^Z' < /dev/tty
+    zle reset-prompt
+    if jobs %- >/dev/null 2>&1; then
+      fg %-
+    else
+      fg
+    fi
+  }
+
+  zle -N fg-widget
+  bindkey -M emacs "^Z" fg-widget
+  bindkey -M vicmd "^Z" fg-widget
+  bindkey -M viins "^Z" fg-widget
+fi

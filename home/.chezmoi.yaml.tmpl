@@ -1,0 +1,5 @@
+{{ $email := promptString "email" -}}
+
+sourceDir: "~/code/dotfiles"
+data:
+  email: {{ $email | quote }}

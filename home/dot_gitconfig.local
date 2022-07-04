@@ -1,0 +1,12 @@
+[init]
+        defaultBranch = main
+[alias]
+        pop = reset head^
+        ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
+[github]
+        user = supaspoida
+[user]
+        email = lar+dev@codeconfab.com
+        name = "Lar Van Der Jagt"
+[credential]
+        helper = osxkeychain
