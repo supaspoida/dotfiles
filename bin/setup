@@ -33,3 +33,7 @@ asdf install
 echo
 echo "---> Setup direnv"
 asdf direnv setup --version latest
+
+echo
+echo "---> Check shipyard dependencies"
+shipyard check
