@@ -28,6 +28,7 @@ brew "vim"
 brew "xz"
 
 cask "1password-cli"
+cask "abyssoft-teleport"
 cask "alfred"
 cask "font-hack-nerd-font"
 cask "ngrok"

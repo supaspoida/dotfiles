@@ -711,6 +711,12 @@
         "options": {
           "full_name": "ngrok"
         }
+      },
+      "abyssoft-teleport": {
+        "version": "1.3.5",
+        "options": {
+          "full_name": "abyssoft-teleport"
+        }
       }
     }
   },
@@ -719,7 +725,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.4",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "bcb6c58543f2da4d2535e4f27cf9926fb773f656",
+        "Homebrew/homebrew-core": "141aed5d76a7f039398bcdb4c39a0f25265ebcf2",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.4"
