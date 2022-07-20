@@ -34,6 +34,7 @@ cask "cron"
 cask "font-hack-nerd-font"
 cask "ngrok"
 cask "notion"
+cask "raycast"
 cask "utm"
 cask "visual-studio-code"
 
