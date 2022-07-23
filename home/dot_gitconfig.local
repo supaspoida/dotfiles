@@ -6,7 +6,7 @@
 [github]
         user = supaspoida
 [user]
-        email = lar+dev@codeconfab.com
+        email = lar@codeconfab.com
         name = "Lar Van Der Jagt"
 [credential]
         helper = osxkeychain
