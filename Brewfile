@@ -25,7 +25,7 @@ brew "starship"
 brew "tmux"
 brew "universal-ctags"
 brew "vim"
-brew "xz"
+brew "zx"
 
 cask "1password-cli"
 cask "abyssoft-teleport"
