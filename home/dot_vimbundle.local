@@ -6,10 +6,10 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-rhubarb'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'arcticicestudio/nord-vim', { 'branch': 'main' }
 Plug 'itchyny/lightline.vim'
-Plug 'evanleck/vim-svelte'
-Plug 'jvirtanen/vim-hcl'
+Plug 'evanleck/vim-svelte', { 'branch': 'main' }
+Plug 'jvirtanen/vim-hcl', { 'branch': 'main' }
 Plug 'jparise/vim-graphql'
 Plug 'pantharshit00/vim-prisma'
 Plug 'hashivim/vim-terraform'
